@@ -1,0 +1,14 @@
+*.log
+*.aux
+*.nav
+*.out
+*.srm
+*.toc
+*.vrb
+*.snm
+
+# the following is for vi and emacs users
+*~
+*#
+.#*
+*.swp
