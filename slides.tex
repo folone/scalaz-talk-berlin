@@ -288,6 +288,20 @@ $\forall a \in S: 1 \otimes a = a \otimes 1 = a$\newline
   \end{minted}
 \end{frame}
 
+\begin{frame}[fragile]{Monoids}
+  \begin{minted}[mathescape,
+      numbersep=5pt,
+      gobble=2,
+      framesep=2mm]{scala}
+    scala> List(1,2,3).suml
+    res16: Int = 6
+
+    scala> List("OH ", "HAI", "!").suml
+    res17: java.lang.String = OH HAI!
+  \end{minted}
+\end{frame}
+
+
 \begin{frame}[fragile]{Functors}
   \includegraphics[scale=0.5]{fmapfmapfmap}
   \begin{minted}[mathescape,
@@ -321,6 +335,23 @@ $\forall a \in S: 1 \otimes a = a \otimes 1 = a$\newline
   \end{minted}
 \end{frame}
 
+\begin{frame}[fragile]{Applicatives}
+    \begin{minted}[mathescape,
+      numbersep=5pt,
+      gobble=2,
+      framesep=2mm]{scala}
+      scala> List(some(1), some(2), some(3))
+      res21: List[Option[Int]] = List(Some(1), Some(2),
+                                      Some(3))
+
+      scala> .sequence
+      res22: Option[List[Int]] = Some(List(1, 2, 3))
+
+      scala> res21.traverse(x => some(x))
+      res23: Option[List[Int]] = Some(List(1, 2, 3))
+  \end{minted}
+\end{frame}
+
 \begin{frame}[fragile]{Monads}
   \begin{minted}[mathescape,
       numbersep=5pt,
@@ -335,13 +366,19 @@ $\forall a \in S: 1 \otimes a = a \otimes 1 = a$\newline
      | j <- List(4,5,6)
      | } yield i*j
     res15: List[Int] = List(4, 5, 6, 8, 10, 12, 12, 15, 18)
-
   \end{minted}
 \end{frame}
 
 \begin{frame}[fragile]{IO}
-  \includegraphics[scale=0.5]{IO}
-  TODO
+  \begin{center}
+    {\Huge DEMO }\newline
+    \includegraphics[scale=0.4]{IO}
+  \end{center}
+\end{frame}
+
+\begin{frame}{That's it}
+  \includegraphics[scale=0.4]{escape}\newline
+  \Huge \centerline{Questions?}
 \end{frame}
 
 \end{document}
