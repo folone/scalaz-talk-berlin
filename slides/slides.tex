@@ -28,7 +28,7 @@
     \item Functor, Applicative, Monad
     \item Effects
     \item scalaz 6 vs seven
-    \item typelevel.org
+    \item typelevel.scala
   \end{itemize}
 \end{frame}
 
@@ -79,7 +79,7 @@
                       ^
   s> ~some(5) // Monoids
   res4: Int = 5
-  s> ~none[Int] // NB: Beware of unary_~ on Validations
+  s> ~none[Int] // NB: Beware of unary_~ on Validations (swap)
   res5: Int = 0
   \end{minted}
 \end{frame}
@@ -250,6 +250,18 @@
     \includegraphics[scale=0.3]{img/monad_tutorial}\newline
     {\large \url{http://www.haskell.org/haskellwiki/Typeclassopedia} }
     {\large \url{http://typeclassopedia.bitbucket.org/} }
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Typeclasses}
+  \begin{center}
+      \begin{itemize}
+        \item A monoid generalizes the (++) operation.
+        \item A functor generalises the map operation.
+        \item An applicative functor generalizes the zip (or zipWith) operation.
+        \item A monad generalizes the concat operation.
+      \end{itemize}
+      \url{http://stackoverflow.com/a/15727162/163423}
   \end{center}
 \end{frame}
 
