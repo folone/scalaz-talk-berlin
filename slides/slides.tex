@@ -376,7 +376,7 @@ $\forall a \in S: 1 \otimes a = a \otimes 1 = a$\newline
       scala> .sequence
       res22: Option[List[Int]] = Some(List(1, 2, 3))
 
-      scala> res21.traverse(x => some(x))
+      scala> res21.traverse(x => some(x)) // sequence . map
       res23: Option[List[Int]] = Some(List(1, 2, 3))
   \end{minted}
 \end{frame}
